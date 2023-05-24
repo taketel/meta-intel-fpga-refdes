@@ -96,7 +96,7 @@ index 000000000000..6231a69204b1
 +
 +			afu_hps@0 {
 +				compatible = "intel,hps-copy-engine";
-+				reg = <0x00000000 0x00001000 0x00001000>;
++				reg = <0x00000000 0x00100000 0x00001000>;
 +				#dma-cells = <1>;
 +			};
 +		};
