@@ -49,7 +49,7 @@ new file mode 100644
 index 000000000000..6231a69204b1
 --- /dev/null
 +++ b/arch/arm64/boot/dts/intel/socfpga_agilex_n6000.dts
-@@ -0,0 +1,66 @@
+@@ -0,0 +1,72 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Copyright (C) 2021-2022, Intel Corporation
@@ -91,6 +91,12 @@ index 000000000000..6231a69204b1
 +			dma-controller@0 {
 +				compatible = "intel,hps-copy-engine";
 +				reg = <0x00000000 0x00000000 0x00001000>;
++				#dma-cells = <1>;
++			};
++
++			afu_hps@0 {
++				compatible = "intel,hps-copy-engine";
++				reg = <0x00000000 0x00001000 0x00001000>;
 +				#dma-cells = <1>;
 +			};
 +		};
