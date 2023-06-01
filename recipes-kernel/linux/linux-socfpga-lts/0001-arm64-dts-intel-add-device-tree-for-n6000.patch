@@ -86,7 +86,7 @@ index 000000000000..6231a69204b1
 +			reg-names = "axi_h2f", "axi_h2f_lw";
 +			#address-cells = <2>;
 +			#size-cells = <1>;
-+			ranges = <0x00000000 0x00000000 0xf9000000 0x00001000>;
++			ranges = <0x00000000 0x00000000 0xf9000000 0x00001000>,< 0x00000001 0x00000000 0x80000000 0x00001000>;
 +
 +			dma-controller@0 {
 +				compatible = "intel,hps-copy-engine";
@@ -94,9 +94,9 @@ index 000000000000..6231a69204b1
 +				#dma-cells = <1>;
 +			};
 +
-+			afu_hps@0 {
++			afu_hps@1 {
 +				compatible = "intel,hps-copy-engine";
-+				reg = <0x00000000 0x00100000 0x00001000>;
++				reg = <0x00000001 0x00000000 0x00001000>;
 +				#dma-cells = <1>;
 +			};
 +		};
